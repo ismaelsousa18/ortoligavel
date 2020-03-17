@@ -18,6 +18,20 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            position: relative;
+
+            .link{
+                color: #fff;
+                text-decoration: none;                
+
+                span{
+                    transition: .3s;
+                }
+
+                &:hover span{
+                    color: yellow;
+                }
+            }
         }
 
         .list{

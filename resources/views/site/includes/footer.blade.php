@@ -7,7 +7,9 @@
 
             <div class="left">© 2020 Ortoligável Ortodontia Inteligente</div>
 
-            <div class="right">Desenvolvido por KBRTEC</div>
+            <a href="https:\\kbrtec.com.br" target="_blank" class="link">
+                <div class="right">Desenvolvido por <span>KBRTEC</span></div>
+            </a>
 
         </div>
 

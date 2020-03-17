@@ -81,6 +81,11 @@
                     box-shadow: 0 2px 5px rgba($secundary, .3);
                 }
             }
+
+            .invalid-feedback{
+                position: absolute;
+                bottom: 0;
+            }
         }
 
         .submit{
@@ -117,6 +122,17 @@
                 border: 2px solid red;
             }
             
+        }
+
+        &.was-validated{
+
+            .input.invalid{
+                border-color: #ff8181;
+
+                &:focus{
+                    border-color: $secundary;
+                }
+            }
         }
     }
 

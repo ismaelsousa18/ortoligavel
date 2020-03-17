@@ -1,20 +1,24 @@
 <div class="colors-list container-xl">
-    <ul class="list">
+    <ul class="list">        
         <li class="item">
             <img src="img/landing-page/yellow.png" alt="" class="background">
             <div class="text">Alinhadores <br> Invísiveis</div>
+            <a href="/" class="link"></a>
         </li>
         <li class="item">
             <img src="img/landing-page/blue.png" alt="" class="background">
             <div class="text">Braquetes <br> Autoligáveis</div>
+            <a href="/" class="link"></a>
         </li>
         <li class="item">
             <img src="img/landing-page/purple.png" alt="" class="background">
             <div class="text">TOHi - <br> Tratamento <br> Ortodôntico <br> Híbrido</div>
+            <a href="/" class="link"></a>
         </li>
         <li class="item">
             <img src="img/landing-page/green.png" alt="" class="background">
             <div class="text">Tratamentos 100% <br> estéticos</div>
+            <a href="/" class="link"></a>
         </li>
         
     </ul>

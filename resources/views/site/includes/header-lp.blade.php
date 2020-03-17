@@ -15,7 +15,7 @@
     </div>
 
     <div class="container">
-        <form method="post" action="{{ url('/send-mail') }}" class="form col-lg-5 offset-lg-7 col-md-7 offset-md-5 col-12">
+        <form method="post" action="{{ url('/send-mail') }}" class="form col-lg-5 offset-lg-7 col-md-7 offset-md-5 col-12 contact-form" novalidate>
             @csrf
             
             <div class="title">Agende uma consulta <br> agora mesmo!</div>
@@ -25,22 +25,25 @@
             @endif
 
             @if(session('success'))
-                <div class="message success">Mensagem enviada.</div>
+                <div class="message success">Mensagem enviada com sucesso.</div>
             @endif
 
             <label class="desc-input">Nome:
                 <img src="img/icons/user.png" alt="" class="icon">
-                <input type="text" class="input" name="nome">
+                <input type="text" class="input" autocomplete="off" name="nome" required>
+                <div class="invalid-feedback">Preencha com seu nome.</div>
             </label>
 
             <label class="desc-input">E-mail:
                 <img src="img/icons/mail.png" alt="" class="icon">
-                <input type="text" class="input" name="email">
+                <input type="text" class="input" autocomplete="off" name="email" required>
+                <div class="invalid-feedback">Preencha com seu e-mail.</div>
             </label>
 
             <label class="desc-input">Telefone:
                 <img src="img/icons/phone_grey.png" alt="" class="icon">
-                <input type="text" class="input" name="telefone">
+                <input type="text" class="input" autocomplete="off" name="telefone" required>
+                <div class="invalid-feedback">Preencha com seu telefone.</div>
             </label>
 
             <button type="submit" class="submit">Agendar uma consulta</button>
