@@ -1,0 +1,12 @@
+@import 'variables',
+'pages/landing-page',
+'includes/header',
+'includes/footer',
+'keyframes',
+'pages/mail';
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+}

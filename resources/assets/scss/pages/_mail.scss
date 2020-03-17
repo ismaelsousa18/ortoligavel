@@ -1,0 +1,31 @@
+section.mail{
+    background-color: $principal;
+    width: 500px;
+    color: #fff;
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    height: calc(100vh - 4rem);
+
+    .logo{
+        margin-bottom: 2rem;
+        width: 300px;
+    }
+
+    .title{
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .bottom{
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        
+    }
+}
