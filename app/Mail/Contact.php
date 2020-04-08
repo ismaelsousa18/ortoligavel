@@ -30,7 +30,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->from('ismaelrsousa18@gmail.com')
+        return $this->from('ismael.silva@kbrtec.com.br')
                     ->subject("Ortoligável - Contato")
                     ->view('mail.contact');
     }

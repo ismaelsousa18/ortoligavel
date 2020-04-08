@@ -368,18 +368,6 @@
             </table>
             <!-- END CENTERED WHITE CONTAINER -->
 
-            <!-- START FOOTER -->
-            <div class="footer">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="content-block">
-                    <span class="apple-link">{{ env('APP_NAME') }}</span>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <!-- END FOOTER -->
-
           </div>
         </td>
         <td>&nbsp;</td>

@@ -1,17 +1,13 @@
-$(document).ready(function () {
-    $("input[name='telefone']").mask("(00) 90000-0000")
-});
-
-$(document).on("keyup", ".contact-form .input" , function(){
+$(document).on("keyup", ".contact-form .input", function () {
     var icon = $(this).closest(".desc-input").find(".icon");
 
-    if($(this).val() != "" && !$(icon).hasClass("color")){        
+    if ($(this).val() != "" && !$(icon).hasClass("color")) {
         var source = icon.attr("src").split(".")[0];
         var ext = icon.attr("src").split(".")[1];
         $(icon).attr('src', source + "-color." + ext);
         $(icon).addClass("color");
     }
-    else if($(this).val() == "" && $(icon).hasClass("color")){
+    else if ($(this).val() == "" && $(icon).hasClass("color")) {
         var source = icon.attr("src").split("-color.")[0];
         var ext = icon.attr("src").split("-color.")[1];
         $(icon).attr('src', source + "." + ext);
@@ -21,11 +17,11 @@ $(document).on("keyup", ".contact-form .input" , function(){
 
 var inputs
 
-$(".form").submit(function(e){
+$(".form").submit(function (e) {
     $(this).addClass("was-validated")
     inputs = $(this).find(".input")
-    
-    $(inputs).each(function(){
+
+    $(inputs).each(function () {
         verifInput($(this))
     })
 
@@ -33,30 +29,55 @@ $(".form").submit(function(e){
 
     var hasInvalid = $(this).find(".invalid")
 
-    if(hasInvalid.length == 0)
+    if (hasInvalid.length == 0)
         valid = true
 
-    if(!valid)
+    if (!valid)
         e.preventDefault()
 })
 
-$(document).on("keyup", "form.was-validated .input" , function(){
+$(document).on("keyup", "form.was-validated .input", function () {
     verifInput($(this))
 })
 
-function verifInput(input){
+function verifInput(input) {
     var valid = true;
     var feedback = $(input).closest('.desc-input').find('.invalid-feedback')
 
-    if($(input).val() == "" && $(input).attr("required") != undefined)
+    if ($(input).val() == "" && $(input).attr("required") != undefined)
         valid = false
 
-    if(valid){
+    if (valid) {
         $(feedback).css("display", "none")
         $(input).removeClass("invalid")
     }
-    else{
+    else {
         $(feedback).css("display", "block")
         $(input).addClass("invalid")
     }
 }
+$(document).ready(function () {
+    $("input[name='telefone']").mask("(00) 90000-0000")
+});
+$(document).on('click', '.header .mobile-button', function () {
+    $(".header .list").toggleClass('open')
+})
+$(document).ready(function () {
+    $(".header-slide .slider").slick({
+        arrows: false,
+        draggable: false,
+        autoplay: false,
+        autoplaySpeed: 4000,
+
+        dots: true,
+        appendDots: $(".header-slide .dots"),
+
+        responsive: [{
+            breakpoint: 992,
+            settings: "unslick"
+        }]
+
+    });
+
+    feather.replace();
+})

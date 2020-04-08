@@ -15,8 +15,12 @@ use App\Mail\Contact;
 |
 */
 
+Route::get('/lp', function () {
+    return view('site.pages.landing-page.landing-page');
+});
+
 Route::get('/', function () {
-    return view('site.landing-page');
+    return view('site.index');
 });
 
 Route::get('/mail-example', function () { return view('mail.contact');});

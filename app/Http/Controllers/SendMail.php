@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
+use App\Rules\phone;
+use App\Rules\mailCustom;
 
 class SendMail extends Controller
 {
@@ -15,8 +17,8 @@ class SendMail extends Controller
     function send(Request $request){
         $request->validate([
             'nome'   =>  'required',
-            'email'  =>  'required|email',
-            'telefone' => 'required'
+            'email'  =>  ['required', new mailCustom],
+            'telefone' => ['required', new phone]
         ]);
 
         $data = array(
@@ -25,7 +27,7 @@ class SendMail extends Controller
             'tel' => $request->telefone
         );
 
-        Mail::to('ismaelrsousa18@gmail.com')->send(new Contact($data));
+        Mail::to('ismael.silva@kbrtec.com.br')->send(new Contact($data));
 
         return back()->with('success', 'Mesage Send');
     }

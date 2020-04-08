@@ -1,12 +1,30 @@
 @import 'variables',
 'pages/landing-page',
-'includes/header',
-'includes/footer',
-'keyframes',
-'pages/mail';
+'pages/index',
+
+'includes/header/lp-header',
+'includes/footer/lp-footer',
+
+'includes/header/header',
+'includes/header/header-slide',
+'includes/footer/footer',
+'keyframes';
 
 body{
     padding: 0;
     margin: 0;
     font-family: $font;
+}
+
+* {
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: unset;
+    
+    &:hover{color: unset;}
 }

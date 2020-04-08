@@ -1,0 +1,133 @@
+.header.principal{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    .content{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+
+        .logo{
+            width: 250px;
+
+            &:hover{
+                opacity: .8;
+            }
+        }
+
+        .mobile-button{
+            display: none;
+        }
+
+        .list{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+
+            .item{
+                color: $principal;
+                font-weight: 500;
+                padding: .5rem 1rem;
+                position: relative;
+                white-space: nowrap;
+
+                &:not(:first-child){
+                    margin-left: .5rem;
+                }
+
+                &:hover{
+                    color: $secundary;
+                }
+
+                &.agendar{
+                    border: none;
+                    padding: 1rem 2rem;
+                    border-radius: 50px;
+                    background: $button-gradient;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: 700;
+                    margin-left: 1rem;
+        
+                    &:hover{
+                        background: $button-gradient-hover;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        position: relative;
+
+        .content{
+            padding: 1rem 2rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .logo{
+                width: 200px;
+            }
+
+            .mobile-button{
+                display: block;
+                margin-left: auto;
+
+                border: none;
+                background-color: $principal;
+                color: #fff;
+                flex: 1;
+                margin-left: 1rem;
+                border-radius: 3px;
+                height: 30px;
+                font-weight: 700;
+
+                .icon{
+                    height: 25px;
+                    width: 30px;
+                }
+            }
+
+            .list{
+                max-height: 0;
+                overflow: hidden;
+                width: 100%;
+                transition: max-height .2s;
+                background-color: $principal;
+                margin: 2rem 0 1rem;
+                display: block;
+
+                .item, .item.agendar{
+                    width: 100%;
+                    padding: 1rem;
+                    font-size: 12px;
+                    border-radius: 0;
+                    background:transparent;
+                    font-weight: 500;
+                    color: #fff;
+                    text-align: center;
+
+                    &:hover{
+                        color: #fff;
+                        background: $principal;
+                    }
+                }
+
+                &.open{
+                    max-height: 400px;
+                }
+            }
+        }
+    }
+}
