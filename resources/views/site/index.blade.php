@@ -147,6 +147,8 @@
 
     <div class="unidades">
 
+        <img src="/img/pages/home/unidade-bg.png" alt="" class="background">
+
         <div class="container content">
 
             <h3 class="sub">Unidades Ortoligável</h3>
@@ -154,42 +156,142 @@
 
             <ul class="list">
                 <li class="item">
-
-                    <div class="image-area">
-                        <img src="/img/pages/home/unidade-2.png" alt="" class="source">
-                    </div>
-
-                    <div class="text-area">
+                    
+                    <div class="top">
+                        <div class="image-area">
+                            <img src="/img/pages/home/unidade-2.png" alt="" class="source">
+                        </div>
                         <div class="icon">
                             <img src="/img/icons/map.png" alt="" class="source">
                         </div>
+                    </div>
+
+                    <div class="text-area">
                         <div class="text">
-                            SANTOS/SP
+                            Santos / SP
                         </div>
                     </div>
 
                 </li>
                 <li class="item">
-
-                    <div class="image-area">
-                        <img src="/img/pages/home/unidade-2.png" alt="" class="source">
-                    </div>
-
-                    <div class="text-area">
+                    
+                    <div class="top">
+                        <div class="image-area">
+                            <img src="/img/pages/home/unidade-1.png" alt="" class="source">
+                        </div>
                         <div class="icon">
                             <img src="/img/icons/map.png" alt="" class="source">
                         </div>
+                    </div>
+
+                    <div class="text-area">
                         <div class="text">
-                            SANTOS/SP
+                            João Pessoa / PB
                         </div>
                     </div>
 
                 </li>
+                
             </ul>
 
         </div>
 
     </div>
+
+    <div class="entenda">
+        <img src="/img/pages/home/entenda-bg.png" alt="" class="background">
+
+        <div class="content container">
+            <div class="tiny">Somos uma</div>
+            <div class="strong">Clínica Digital Estética</div>
+
+            <a href="">
+                <button class="entenda-mais">Entenda Mais</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="parceiros">
+
+        <div class="content container">
+
+            <div class="top">
+
+                <div class="tiny">Cientes e parceiros</div>
+                <div class="strong">Ortoligável</div>
+
+            </div>
+
+            <ul class="parceiros-carousel">
+
+                <li class="item black-light">
+                    <a href="http://newone.odo.br" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-one-logo.png" alt="New One" class="source">
+                </li>
+
+                <li class="item blue-dark">
+                    <a href="http://newaligner.com.br" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-aligner-logo.png" alt="New Aligner" class="source">
+                </li>
+
+                <li class="item black">
+                    <a href="https://newevolution.odo.br/" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-evolution-logo.png" alt="New Evolution" class="source">
+                </li>
+                
+                <li class="item white">
+                    <a href="http://casa.odo.br/" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/casa-logo.png" alt="Centro Avançado em Sistema Autoligável" class="source">
+                </li>
+
+                <li class="item black-light">
+                    <a href="http://newone.odo.br" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-one-logo.png" alt="New One" class="source">
+                </li>
+
+                <li class="item blue-dark">
+                    <a href="http://newaligner.com.br" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-aligner-logo.png" alt="New Aligner" class="source">
+                </li>
+
+                <li class="item black">
+                    <a href="https://newevolution.odo.br/" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-evolution-logo.png" alt="New Evolution" class="source">
+                </li>
+                
+                <li class="item white">
+                    <a href="http://casa.odo.br/" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/casa-logo.png" alt="Centro Avançado em Sistema Autoligável" class="source">
+                </li>
+
+                <li class="item black-light">
+                    <a href="http://newone.odo.br" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-one-logo.png" alt="New One" class="source">
+                </li>
+
+                <li class="item blue-dark">
+                    <a href="http://newaligner.com.br" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-aligner-logo.png" alt="New Aligner" class="source">
+                </li>
+
+                <li class="item black">
+                    <a href="https://newevolution.odo.br/" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/new-evolution-logo.png" alt="New Evolution" class="source">
+                </li>
+                
+                <li class="item white">
+                    <a href="http://casa.odo.br/" target="_blank" class="link"></a>
+                    <img src="/img/pages/home/casa-logo.png" alt="Centro Avançado em Sistema Autoligável" class="source">
+                </li>
+
+            </ul>
+
+            
+
+        </div>
+
+    </div>
+
 
 </section>
 

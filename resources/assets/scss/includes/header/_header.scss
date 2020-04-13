@@ -1,4 +1,4 @@
-.header.principal{
+body >.header.principal{
     position: absolute;
     width: 100%;
     top: 0;
@@ -40,27 +40,43 @@
                 padding: .5rem 1rem;
                 position: relative;
                 white-space: nowrap;
+                transition: .2s;
 
                 &:not(:first-child){
                     margin-left: .5rem;
                 }
 
+                &:after{
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    background-color: $secundary;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: .2s;
+                }
+
                 &:hover{
                     color: $secundary;
+
+                    &:not(.agendar)::after{
+                        width: 100%;
+                    }
                 }
 
                 &.agendar{
                     border: none;
                     padding: 1rem 2rem;
                     border-radius: 50px;
-                    background: $button-gradient;
+                    background-color: $secundary;
                     color: #fff;
                     font-size: 13px;
                     font-weight: 700;
                     margin-left: 1rem;
         
                     &:hover{
-                        background: $button-gradient-hover;
+                        background-color: $principal;
                     }
                     
                 }
@@ -83,6 +99,7 @@
             .mobile-button{
                 display: block;
                 margin-left: auto;
+                max-width: 80px;
 
                 border: none;
                 background-color: $principal;
