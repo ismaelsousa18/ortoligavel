@@ -10,5 +10,8 @@
 <!-- SLICK -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<!-- LIGHTBOX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
 <!-- CUSTOM SCRIPTS -->
 <script src="js/main-min.js"></script>

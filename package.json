@@ -24,6 +24,7 @@
         "gulp-imagemin": "^7.1.0",
         "gulp-minify": "^3.1.0",
         "gulp-rename": "^2.0.0",
-        "gulp-sass": "^4.0.2"
+        "gulp-sass": "^4.0.2",
+        "lightbox2": "^2.11.1"
     }
 }

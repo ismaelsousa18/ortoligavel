@@ -12,6 +12,7 @@
     
     @if(!\Request::is('lp'))
         @include('site.includes.header.header')
+        @include('site.includes.breadcrumb')        
     @endif
 
     @yield('content')

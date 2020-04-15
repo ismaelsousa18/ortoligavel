@@ -1,0 +1,15 @@
+*, ul, li {
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+a {
+    text-decoration: none !important;
+    color: unset;
+    
+    &:hover{color: unset;}
+}

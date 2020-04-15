@@ -1,15 +1,16 @@
-body >.header.principal{
-    position: absolute;
+.header.principal{
     width: 100%;
     top: 0;
     left: 0;
     z-index: 20;
+    position: relative;
+    padding: 1rem 0;
 
     .content{
         display: flex;
         width: 100%;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         padding: 1rem 0;
 
         .logo{
@@ -86,6 +87,7 @@ body >.header.principal{
 
     @media screen and (max-width: 992px){
         position: relative;
+        
 
         .content{
             padding: 1rem 2rem;
@@ -102,7 +104,7 @@ body >.header.principal{
                 max-width: 80px;
 
                 border: none;
-                background-color: $principal;
+                background-color: $secundary;
                 color: #fff;
                 flex: 1;
                 margin-left: 1rem;
@@ -120,12 +122,13 @@ body >.header.principal{
                 max-height: 0;
                 overflow: hidden;
                 width: 100%;
-                transition: max-height .2s;
-                background-color: $principal;
-                margin: 2rem 0 1rem;
+                transition: max-height .2s, margin .2s;
+                background-color: $secundary;
                 display: block;
+                margin: 0;
 
                 .item, .item.agendar{
+                    margin: 0;
                     width: 100%;
                     padding: 1rem;
                     font-size: 12px;
@@ -143,8 +146,14 @@ body >.header.principal{
 
                 &.open{
                     max-height: 400px;
+                    margin: 2rem 0 1rem;
                 }
             }
         }
     }
+}
+
+.index-header-container{
+    position: absolute;
+    width: 100%;
 }

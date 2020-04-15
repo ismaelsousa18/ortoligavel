@@ -1,30 +1,21 @@
 @import 'variables',
+'resets',
+
+// PAGES
 'pages/landing-page',
 'pages/index',
+'pages/about',
 
+// INCLUDES
+
+// LANDING PAGE
 'includes/header/lp-header',
 'includes/footer/lp-footer',
 
 'includes/header/header',
 'includes/header/header-slide',
 'includes/footer/footer',
+'includes/breadcrumb',
+
+// KEYFRAMES
 'keyframes';
-
-body{
-    padding: 0;
-    margin: 0;
-    font-family: $font;
-}
-
-* {
-    outline: none !important;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none !important;
-    color: unset;
-    
-    &:hover{color: unset;}
-}

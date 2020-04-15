@@ -1,4 +1,8 @@
-<div class="header-slide">
+<div class="index-header-container">
+    @include('site.includes.header.header')
+</div>
+
+<div class="header-slide">    
 
     <div class="slider">
         <div class="item">

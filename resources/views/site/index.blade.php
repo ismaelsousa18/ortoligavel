@@ -1,8 +1,6 @@
-﻿@extends('site.layout.general')
+﻿@extends('site.layout.main')
 
 @section('content')
-
-@include('site.includes.header.header-slide')
 
 <section class="index-page">
 
