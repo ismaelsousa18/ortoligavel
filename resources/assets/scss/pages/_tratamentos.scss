@@ -1,0 +1,346 @@
+.tratamentos-listagem-page{
+    
+    > .content{
+        padding: 4rem 0;
+        
+        > .title{
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+            max-width: 570px;
+            margin: auto;
+        }
+
+        > .sub{
+            font-size: 14px;
+            max-width: 400px;
+            text-align: center;
+            margin: 2rem auto;
+        }
+
+        > .listagem{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .detail-left{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                z-index: -1;
+            }
+
+            .detail-right{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 50%;
+                z-index: -1;
+            }
+
+            .tratamento{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                position: relative;
+                margin: 2rem 0;
+
+                > .left{
+                    width: 400px;
+                    flex: 0 0 400px;
+                    height: 400px;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 4rem;
+                    transition: transform .2s .2s, box-shadow .2s 0s;
+                    z-index: 20;
+
+                    > .image{
+                        width: 100%;
+                        min-height: 100%;
+                        height: auto;
+                        transition: .2s;
+                    }
+
+                    &:hover{
+
+                        > .image{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                > .right{
+                    width: 100%;
+                    flex: 1;
+
+                    > .title{
+                        max-width: 270px;
+                        font-weight: 700;
+                        font-size: 24px;
+                        margin-bottom: 2rem;
+                    }
+
+                    > .desc{
+                        display: flex;
+                        justify-content: space-between;
+                        flex: 1;
+                        width: 100%;
+                        
+                        > .text{
+                            max-width: 400px;
+                        }
+
+                        > .link{
+
+                            > .arrow{
+                                height: 70px;
+                                width: 70px;
+                                border: none;
+                                color: #fff;
+                                z-index: 1;
+                                position: relative;
+    
+                                &:before{
+                                    z-index: -1;
+                                    content: 'Saiba mais';
+                                    transition: right .2s, transform .5s;
+                                    text-transform: uppercase;
+                                    position: absolute;
+                                    right: 0%;
+                                    top: 0;
+                                    transform: scale(0, 1);
+                                    padding: 1rem 2rem;
+                                    font-weight: 700;
+                                    overflow: hidden;
+                                    height: 100%;
+                                    white-space: nowrap;
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(even){
+                    flex-direction: row-reverse;
+
+                    > .left{
+                        margin: 0;
+                        margin-left: 4rem;
+                    }
+
+                    &:hover{
+
+                        > .left{
+                            transform: rotateY(30deg) rotateX(-30deg) rotateZ(10deg);
+                            box-shadow: 40px 30px 0px 10px #cfcfe2;
+                        }
+                    }
+                }
+
+                &.yellow{
+                    .right .arrow{
+                        background-color: $yellow;
+
+                        &:before{
+                            background-color: $yellow;
+                        }
+
+                        &:hover{
+                            &, &:before{
+                              background-color: darken($yellow, 5%);  
+                            }
+                        }
+                    }
+                }
+
+                &.blue{
+                    .right .arrow{
+                        background-color: $blue;
+
+                        &:before{
+                            background-color: $blue;
+                        }                        
+
+                        &:hover{
+                            &, &:before{
+                              background-color: darken($blue, 5%);  
+                            }
+                        }
+                    }
+                }
+
+                &.purple{
+                    .right .arrow{
+                        background-color: $purple;
+
+                        &:before{
+                            background-color: $purple;
+                        }
+
+                        &:hover{
+                            &, &:before{
+                              background-color: darken($purple, 5%);  
+                            }
+                        }
+                    }
+                }
+
+                &.green{
+                    .right .arrow{
+                        background-color: $green;
+
+                        &:before{
+                            background-color: $green;
+                        }
+
+                        &:hover{
+                            &, &:before{
+                              background-color: darken($green, 5%);  
+                            }
+                        }
+                    }
+                }
+
+                &:hover{
+                    > .left{
+                        transform: rotateY(-30deg) rotateX(-30deg) rotateZ(-10deg);
+                        box-shadow: -40px 30px 0px 10px #cfcfe2;
+                        transition: transform .2s, box-shadow .2s .2s;
+                    }             
+                    
+                    > .right > .desc > .link > .arrow{
+                        &:before{
+                            right: 100%;
+                            transform: scale(1);
+                            transition: right .2s, transform .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        > .content{
+
+            > .title{
+                padding: 0 2rem;
+                font-size: 22px;
+            }
+
+            > .sub{
+                padding: 0 2rem;
+            }
+
+            > .listagem{
+                .detail-left, .detail-right{
+                    display: none;
+                }
+
+                .tratamento{
+                    flex-direction: column;
+
+                    > .left{
+                        width: 100%;
+                        margin: 0;
+                        height: 15rem;
+                        flex: 0 0 15rem;
+                        border-radius: 10px;
+                        margin-bottom: 2rem;
+                    }
+
+                    > .right{
+                        position: relative;
+
+                        > .desc{
+                            > .arrow{
+                                width: 60px;
+                                height: 60px;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+
+                                &:hover{
+
+                                    &::before{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(even){
+                        flex-direction: column;
+
+                        > .left{
+                            margin: 0;
+                            margin-bottom: 2rem;
+                        }
+
+                        > .right{
+                            > .title{
+                                float: right;
+                                text-align: right;
+                            }
+
+                            > .desc{
+                                > .arrow{
+                                    right: unset;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        *{
+                            transform: none !important;
+                            box-shadow: none !important;
+                        }
+
+                        > .right{
+                            > .desc{
+                                > .arrow:before{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // FOR IE
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        > .content{
+            > .listagem{
+                .tratamento:hover{
+                    > .right{
+                        > .desc{
+                            > .link{
+                                > .arrow{
+                                    &:before{
+                                        transform: scale(1);
+                                        left: -150%;
+                                        right: unset;
+                                        transition: left .2s, right .2s, transform .2s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

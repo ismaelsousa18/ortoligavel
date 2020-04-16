@@ -27,6 +27,12 @@ Route::get('/sobre', function () {
     return view('site.about');
 });
 
+Route::group(['prefix' => '/tratamentos'], function () {
+    Route::get('/', function () {
+        return view('site.tratamentos.listagem');
+    });
+});
+
 Route::get('/mail-example', function () { return view('mail.contact');});
 
 Route::post('/send-mail', 'SendMail@send');
