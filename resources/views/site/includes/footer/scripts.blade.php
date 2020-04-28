@@ -14,4 +14,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
 
 <!-- CUSTOM SCRIPTS -->
-<script src="js/main-min.js"></script>
+<script src="/js/main-min.js"></script>

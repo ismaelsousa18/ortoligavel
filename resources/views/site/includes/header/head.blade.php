@@ -12,6 +12,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
 
 <!-- CUSTOM STYLES -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <link rel="shortcut icon" href="/img/logo-icon.ico" type="image/x-icon">

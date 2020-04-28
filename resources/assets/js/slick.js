@@ -83,5 +83,28 @@ $(document).ready(function () {
         ]
     })
 
+    $(".tratamentos-integra-page .photos-list").slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: '<button class="slick-arrow slick-prev"><i data-feather="chevron-left" class="icon"></i></button>',
+        nextArrow: '<button class="slick-arrow slick-next"><i data-feather="chevron-right" class="icon"></i></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    })
+
     feather.replace()
 })

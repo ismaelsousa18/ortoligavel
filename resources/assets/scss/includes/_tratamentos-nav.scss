@@ -1,0 +1,82 @@
+.tratamentos-nav{
+    width: 100%;
+
+    > .menu{
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 2rem;
+
+        > .content{
+            display: flex;
+            padding: 1.5rem 0rem;
+            position: relative;
+            align-items: center;
+            overflow: hidden;
+
+            .item, .active{
+                flex: 1;
+                font-size: 12px;
+                text-align: center;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 2rem;
+                position: relative;                
+
+                > .link{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    height: 100px;
+                }
+
+                &:not(:last-child){
+                    border-right: 3px dotted #ccc;
+                }
+
+                &.active{
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: -1.5rem;
+                        width: 100%;
+                        height: 2px;
+                        left: 0;
+                        border-radius: 30px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        &.yellow{
+            > .content > .active:after{
+                background: linear-gradient(to right, transparent 0%, $yellow 50%, transparent 100%);
+            }
+        }
+
+        &.blue{
+            > .content > .active:after{
+                background: linear-gradient(to right, transparent 0%, $blue 50%, transparent 100%);
+            }
+        }
+
+        &.purple{
+            > .content > .active:after{
+                background: linear-gradient(to right, transparent 0%, $purple 50%, transparent 100%);
+            }
+        }
+
+        &.green{
+            > .content > .active:after{
+                background: linear-gradient(to right, transparent 0%, $green 50%, transparent 100%);
+            }
+        }
+
+        &.red{
+            > .content > .active:after{
+                background: linear-gradient(to right, transparent 0%, $red 50%, transparent 100%);
+            }
+        }
+    }
+}

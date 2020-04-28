@@ -209,6 +209,22 @@
                     }
                 }
 
+                &.red{
+                    .right .arrow{
+                        background-color: $red;
+
+                        &:before{
+                            background-color: $red;
+                        }
+
+                        &:hover{
+                            &, &:before{
+                              background-color: darken($red, 5%);  
+                            }
+                        }
+                    }
+                }
+
                 &:hover{
                     > .left{
                         transform: rotateY(-30deg) rotateX(-30deg) rotateZ(-10deg);
@@ -261,7 +277,7 @@
                         position: relative;
 
                         > .desc{
-                            > .arrow{
+                            .arrow{
                                 width: 60px;
                                 height: 60px;
                                 position: absolute;
@@ -339,6 +355,591 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.tratamentos-integra-page{
+
+    > .principal{
+        text-align: center;
+        padding: 4rem 0;
+
+        > .title{
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        > .desc{
+            line-height: 25px;
+            max-width: 900px;
+            margin: auto;
+            font-size: 13px;
+        }
+
+        > a  > .agendar{
+            border: none;
+            color: #fff;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            margin-top: 4rem;
+            transition: .2s;
+        }
+    }
+
+    > .photos-area{
+
+        > .photos-list{
+            display: flex;
+            width: 100%;
+            position: relative;
+            align-items: center;
+            padding: 0;
+
+            .slick-arrow{
+                height: 50px;
+                width: 50px;
+                flex: 0 0 50px;
+                border-radius: 50%;
+                border: none;
+                color: #fff;
+                background-color: $principal-dark;
+                position: absolute;
+                z-index: 20;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .2s;
+
+                &.slick-prev{
+                    left: -25px;
+                }
+
+                &.slick-next{
+                    right: -25px;
+
+                    svg{
+                        margin-left: 3px;
+                    }
+                }
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
+            .slick-list{
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            .photo{
+                height: 400px;
+                overflow: hidden;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .2s;
+                position: relative;
+                cursor: pointer;
+
+                &:after{
+                    content: '';
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    background: url("#{$img}icons/expand.png") center/contain no-repeat;
+                    opacity: 0;
+                    transition: .2s;
+                    z-index: 3;
+                }
+
+                &:before{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    left: 100%;
+                    top: 0%;
+                    position: absolute;
+                    background: $photo-hover;
+                    opacity: 0;
+                    transition: .2s;
+                    z-index: 2;
+                }
+
+                > .source{
+                    transition: .2s;
+                }
+
+                &:hover{
+                    
+                    &:after{
+                        opacity: 1;
+                    }
+
+                    &:before{
+                        opacity: 1;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+
+            .link{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 30;
+            }
+        }
+    }
+
+    > .porque-usar{
+        padding: 4rem 0;
+
+        > .title{
+            font-size: 24px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        > .list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5rem;
+
+            > .item{
+                flex: 0 0 32%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                box-shadow: 0 0 20px #E5F3FF;
+                border-radius: 15px;
+                transition: .2s;
+
+                polyline{transition: .2s;}
+
+                > .icon{
+                    margin-right: 1rem;
+                }
+
+                &:hover{
+
+                    > .icon{
+                        > polyline{
+                            stroke-width: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .passos{
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        > .title{
+            font-size: 24px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        > .passos-list{
+            display: flex;
+            margin: 4rem 0;
+            width: 100%;
+
+            > .passo{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                flex: 1;
+
+                > .number{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-weight: 700;
+                    position: relative;
+                    transition: box-shadow .2s;
+                }
+
+                > .title{
+                    font-weight: 700;
+                    margin: 1rem 0;
+                    text-align: center;
+                    max-width: 200px;
+                    min-height: 50px;
+                }
+
+                > .desc{
+                    font-size: 14px;
+                    text-align: center;
+                    max-width: 200px;
+                }
+
+                &:not(:last-child){
+                    margin-right: 4rem;
+                    
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        right: -4.5rem;
+                        top: 15px;
+                        width: 8rem;
+                        height: 5px;
+                        transition: .2s;
+                    }
+                }
+
+                &:hover{
+                    > .number{
+                        transform: rotateY(360deg);
+                        transition: transform .5s, box-shadow .2s .5s;
+                    }
+
+                    &:after{
+                        width: 12rem;
+                        transform: translate(3rem, 0);
+                    }
+                }
+            }
+        }
+
+        > a  > .agendar{
+            border: none;
+            color: #fff;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            margin-top: 4rem;
+            transition: .2s;
+        }
+    }
+
+    &.yellow{
+        > .principal{
+            > a > .agendar{
+                background-color: $yellow;
+
+                &:hover{
+                    background-color: darken($yellow, 5%);
+                }
+            }
+        }
+
+        > .photos-area{
+            > .photos-list{
+                .slick-arrow:hover{
+                    background-color: $yellow;
+                }
+            }
+        }
+
+        > .porque-usar{
+            > .list{
+                > .item{
+                    > .icon{
+                        color: $yellow;
+                    }
+
+                    &:hover{
+                        color: $yellow;
+                        box-shadow: 0 0 0px 1px $yellow;
+                    }
+                }
+            }
+        }
+
+        > .passos{
+            > .passos-list{
+                > .passo{
+                    > .number{
+                        background-color: $yellow;
+                    }
+
+                    &:hover{
+                        > .number{
+                            box-shadow: 0 0 0 5px rgba($yellow, .3);
+                        }
+                    }
+
+                    &:not(:last-child):after{
+                        background: radial-gradient($yellow 0%, transparent 80%);
+                    }
+                }
+            }
+
+            > a > .agendar{
+                background-color: $yellow;
+
+                &:hover{
+                    background-color: darken($yellow, 5%);
+                }
+            }
+        }
+    }
+
+    &.blue{
+        > .principal{
+            > a > .agendar{
+                background-color: $blue;
+
+                &:hover{
+                    background-color: darken($blue, 5%);
+                }
+            }
+        }
+
+        > .photos-area{
+            > .photos-list{
+                .slick-arrow:hover{
+                    background-color: $blue;
+                }
+            }
+        }
+
+        > .porque-usar{
+            > .list{
+                > .item{
+                    > .icon{
+                        color: $blue;
+                    }
+
+                    &:hover{
+                        color: $blue;
+                        box-shadow: 0 0 0px 1px $blue;
+                    }
+                }
+            }
+        }
+
+        > .passos{
+            > .passos-list{
+                > .passo{
+                    > .number{
+                        background-color: $blue;
+                    }
+
+                    &:hover{
+                        > .number{
+                            box-shadow: 0 0 0 5px rgba($blue, .3);
+                        }
+                    }
+
+                    &:not(:last-child):after{
+                        background: radial-gradient($blue 0%, transparent 80%);
+                    }
+                }
+            }
+
+            > a > .agendar{
+                background-color: $blue;
+
+                &:hover{
+                    background-color: darken($blue, 5%);
+                }
+            }
+        }
+    }
+
+    &.purple{
+        > .principal{
+            > a > .agendar{
+                background-color: $purple;
+
+                &:hover{
+                    background-color: darken($purple, 5%);
+                }
+            }
+        }
+
+        > .photos-area{
+            > .photos-list{
+                .slick-arrow:hover{
+                    background-color: $purple;
+                }
+            }
+        }
+
+        > .porque-usar{
+            > .list{
+                > .item{
+                    > .icon{
+                        color: $purple;
+                    }
+
+                    &:hover{
+                        color: $purple;
+                        box-shadow: 0 0 0px 1px $purple;
+                    }
+                }
+            }
+        }
+
+        > .passos{
+            > .passos-list{
+                > .passo{
+                    > .number{
+                        background-color: $purple;
+                    }
+
+                    &:hover{
+                        > .number{
+                            box-shadow: 0 0 0 5px rgba($purple, .3);
+                        }
+                    }
+
+                    &:not(:last-child):after{
+                        background: radial-gradient($purple 0%, transparent 80%);
+                    }
+                }
+            }
+
+            > a > .agendar{
+                background-color: $purple;
+
+                &:hover{
+                    background-color: darken($purple, 5%);
+                }
+            }
+        }
+    }
+
+    &.green{
+        > .principal{
+            > a > .agendar{
+                background-color: $green;
+
+                &:hover{
+                    background-color: darken($green, 5%);
+                }
+            }
+        }
+
+        > .photos-area{
+            > .photos-list{
+                .slick-arrow:hover{
+                    background-color: $green;
+                }
+            }
+        }
+
+        > .porque-usar{
+            > .list{
+                > .item{
+                    > .icon{
+                        color: $green;
+                    }
+
+                    &:hover{
+                        color: $green;
+                        box-shadow: 0 0 0px 1px $green;
+                    }
+                }
+            }
+        }
+
+        > .passos{
+            > .passos-list{
+                > .passo{
+                    > .number{
+                        background-color: $green;
+                    }
+
+                    &:hover{
+                        > .number{
+                            box-shadow: 0 0 0 5px rgba($green, .3);
+                        }
+                    }
+
+                    &:not(:last-child):after{
+                        background: radial-gradient($green 0%, transparent 80%);
+                    }
+                }
+            }
+
+            > a > .agendar{
+                background-color: $green;
+
+                &:hover{
+                    background-color: darken($green, 5%);
+                }
+            }
+        }
+    }
+
+    &.red{
+        > .principal{
+            > a > .agendar{
+                background-color: $red;
+
+                &:hover{
+                    background-color: darken($red, 5%);
+                }
+            }
+        }
+
+        > .photos-area{
+            > .photos-list{
+                .slick-arrow:hover{
+                    background-color: $red;
+                }
+            }
+        }
+
+        > .porque-usar{
+            > .list{
+                > .item{
+                    > .icon{
+                        color: $red;
+                    }
+
+                    &:hover{
+                        color: $red;
+                        box-shadow: 0 0 0px 1px $red;
+                    }
+                }
+            }
+        }
+
+        > .passos{
+            > .passos-list{
+                > .passo{
+                    > .number{
+                        background-color: $red;
+                    }
+
+                    &:hover{
+                        > .number{
+                            box-shadow: 0 0 0 5px rgba($red, .3);
+                        }
+                    }
+
+                    &:not(:last-child):after{
+                        background: radial-gradient($red 0%, transparent 80%);
+                    }
+                }
+            }
+
+            > a > .agendar{
+                background-color: $red;
+
+                &:hover{
+                    background-color: darken($red, 5%);
                 }
             }
         }

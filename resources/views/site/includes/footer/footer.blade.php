@@ -8,13 +8,13 @@
             <li class="item">
                 <div class="icon-container">
                     <a href="" class="link"></a>
-                    <img src="img/icons/facebook-w.png" alt="" class="icon">
+                    <img src="/img/icons/facebook-w.png" alt="" class="icon">
                 </div>
             </li>
             <li class="item">
                 <div class="icon-container">
                     <a href="" class="link"></a>
-                    <img src="img/icons/instagram-w.png" alt="" class="icon">
+                    <img src="/img/icons/instagram-w.png" alt="" class="icon">
                 </div>
             </li>
         </ul>
@@ -100,7 +100,7 @@
     <div class="container bottom">
 
         <div class="left">
-            2020 Ortoligável Ortodontia Inteligente
+            © 2020 Ortoligável Ortodontia Inteligente
         </div>
 
         <div class="right">

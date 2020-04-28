@@ -2,18 +2,18 @@
 
 @section('breadcrumb-item')
 <li class='item'><a href="/tratamentos">Tratamentos</a></li>
-<li class='item active'><a href="/tratamentos/alinhadores-invisiveis">Alinhadores Invisíveis</a></li>
+<li class='item active'><a href="/tratamentos/autoligavel-lingual">Autoligável Lingual</a></li>
 @endsection
 
-@section('breadcrumb-title','Alinhadores Invisíveis')
+@section('breadcrumb-title','Autoligável Lingual')
 
-@section('breadcrumb-class','yellow')
+@section('breadcrumb-class','red')
 
 @section('content')
 
     <div class="principal container">
 
-        <h2 class="title">Alinhadores Invisíveis</h2>
+        <h2 class="title">Autoligável Lingual</h2>
 
         <p class="desc">
             A maneira simples e rápida de ter um novo sorriso! Os alinhadores NewALGINER são a mais alta e moderna tecnologia a serviço da ortodontia. Possibilitam um tratamento ortodôntico livre dos braquetes, proporcionando ao paciente um maior conforto e com resultados rápidos sem que ninguém perceba que o paciente está em tratamento, devido ao grande valor estético. Outra grande vantagem é a possibilidade de retirada do alinhador para uma perfeita higienização dos dentes e sem nenhuma restrição alimentar. Transmitem forças leves aos tecidos do complexo dento-alveolar, realizando não apenas movimentações dentárias simples, mas também as complexas.

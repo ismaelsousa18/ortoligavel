@@ -1,4 +1,4 @@
-<div class="breadcrumb">
+<div class="breadcrumb @yield('breadcrumb-class')">
 
     <ul class="dots-list">
         <li class="dots"></li>

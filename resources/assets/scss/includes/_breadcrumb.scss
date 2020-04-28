@@ -5,6 +5,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    margin: 0;
 
     > .dots-list{
         display: flex;
@@ -46,7 +47,7 @@
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background-color: rgba($secundary, .4);
+            background-color: rgba(#fff, .4);
             margin: 0 7px;
             animation: dotsOpacityAnim 5s infinite;
 
@@ -128,9 +129,136 @@
                 font-weight: 500;
                 font-size: 12px;
                 transition: .2s;
+                font-weight: 700;
 
                 &:hover{
                     background-color: $principal-light;
+                }
+            }
+        }
+    }
+
+    &.yellow{
+        background-color: $yellow;
+
+        > .content{
+            > .list{
+                > .item{
+                    color: #fff;
+                }
+            }
+
+            > .line > a > .agendar{
+                background-color: #fff;
+                color: $yellow;
+
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    &.blue{
+        background-color: $blue;
+
+        > .content{
+            > .list{
+                > .item{
+                    color: #fff;
+                }
+            }
+
+            > .line > a > .agendar{
+                background-color: #fff;
+                color: $blue;
+
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    &.yellow{
+        background-color: $yellow;
+
+        > .content{
+            > .list{
+                > .item{
+                    color: #fff;
+                }
+            }
+
+            > .line > a > .agendar{
+                background-color: #fff;
+                color: $yellow;
+
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    &.purple{
+        background-color: $purple;
+
+        > .content{
+            > .list{
+                > .item{
+                    color: #fff;
+                }
+            }
+
+            > .line > a > .agendar{
+                background-color: #fff;
+                color: $purple;
+
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    &.green{
+        background-color: $green;
+
+        > .content{
+            > .list{
+                > .item{
+                    color: #fff;
+                }
+            }
+
+            > .line > a > .agendar{
+                background-color: #fff;
+                color: $green;
+
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    &.red{
+        background-color: $red;
+
+        > .content{
+            > .list{
+                > .item{
+                    color: #fff;
+                }
+            }
+
+            > .line > a > .agendar{
+                background-color: #fff;
+                color: $red;
+
+                &:hover{
+                    background-color: #eee;
                 }
             }
         }
@@ -149,6 +277,21 @@
                     margin-top: 2rem;
                 }
             }
+        }
+
+        > .dots-list{
+
+            &:nth-child(1){ .dots:nth-child(n + 4){  display: none; } }
+
+            &:nth-child(2){ .dots:nth-child(n + 3){  display: none; } }
+
+            &:nth-child(3){ .dots:nth-child(n + 2){  display: none; } }
+
+            &:nth-child(5){ .dots:nth-child(n + 4){  display: none; } }
+
+            &:nth-child(6){ .dots:nth-child(n + 3){  display: none; } }
+
+            &:nth-child(7){ .dots:nth-child(n + 2){  display: none; } }
         }
     }
 }

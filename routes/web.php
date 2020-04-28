@@ -31,6 +31,26 @@ Route::group(['prefix' => '/tratamentos'], function () {
     Route::get('/', function () {
         return view('site.tratamentos.listagem');
     });
+
+    Route::get('/alinhadores-invisiveis', function () {
+        return view('site.tratamentos.alinhadores-invisiveis');
+    });
+
+    Route::get('/braquetes-autoligaveis', function () {
+        return view('site.tratamentos.braquetes-autoligaveis');
+    });
+
+    Route::get('/tratamento-hibrido', function () {
+        return view('site.tratamentos.tratamento-hibrido');
+    });
+
+    Route::get('/tratamento-estetico', function () {
+        return view('site.tratamentos.tratamento-estetico');
+    });
+
+    Route::get('/autoligavel-lingual', function () {
+        return view('site.tratamentos.autoligavel-lingual');
+    });
 });
 
 Route::get('/mail-example', function () { return view('mail.contact');});
