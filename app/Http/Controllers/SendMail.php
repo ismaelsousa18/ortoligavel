@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
 use App\Rules\phone;
 use App\Rules\mailCustom;
+use App\Rules\name;
 
 class SendMail extends Controller
 {
@@ -14,9 +15,9 @@ class SendMail extends Controller
         return view('mail.contact');
     }
 
-    function send(Request $request){
+    function lpsend(Request $request){
         $request->validate([
-            'nome'   =>  'required',
+            'nome'   =>  ['required', new name],
             'email'  =>  ['required', new mailCustom],
             'telefone' => ['required', new phone]
         ]);
@@ -27,8 +28,30 @@ class SendMail extends Controller
             'tel' => $request->telefone
         );
 
-        Mail::to('ismael.silva@kbrtec.com.br')->send(new Contact($data));
+        Mail::to(env('MAIL_ADDRESS_TO'))->send(new Contact($data));
 
-        return back()->with('success', 'Mesage Send');
+        return back()->with('success', 'Mensagem enviada com sucesso!');
+    }
+
+    function send(Request $request){
+        $request->validate([
+            'nome'   =>  ['required', new name],
+            'email'  =>  ['required', new mailCustom],
+            'telefone' => ['required', new phone],
+            'assunto' => ['required'],
+            'mensagem' => 'max:500'
+        ]);
+
+        $data = array(
+            'nome'  => $request->nome,
+            'email' => $request->email,
+            'tel' => $request->telefone,
+            'assunto' => $request->assunto,
+            'mensagem' => $request->mensagem
+        );
+
+        Mail::to(env('MAIL_ADDRESS_TO'))->send(new Contact($data));
+
+        return back()->with('success', 'Mensagem enviada com sucesso!');
     }
 }

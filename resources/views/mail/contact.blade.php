@@ -324,32 +324,45 @@
                               <td align="left">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: 80%;">
                                   <tbody>
+
                                     @if (isset($data['tipo_contato']))
                                     <tr>
                                       <td style="padding-right: 8px"><b>Contact Type</b></td>
                                       <td>{{ $data['tipo_contato'] }}</td>
                                     </tr>
                                     @endif
+
                                     <tr>
-                                      <td><b>Nome</b></td>
+                                      <td><b>Nome:</b></td>
                                       <td>{{ $data['nome'] }}</td>
                                     </tr>
+
                                     <tr>
-                                      <td><b>E-mail</b></td>
+                                      <td><b>E-mail:</b></td>
                                       <td>{{ $data['email'] }}</td>
                                     </tr>
+
                                     @if (isset($data['tel']))
                                     <tr>
-                                      <td><b>Telefone</b></td>
+                                      <td><b>Telefone:</b></td>
                                       <td>{{ $data['tel'] }}</td>
                                     </tr>
                                     @endif
-                                    @if (isset($mensagem))
+
+                                    @if (isset($data['assunto']))
                                     <tr>
-                                      <td><b>Message</b></td>
+                                      <td><b>Assunto:</b></td>
+                                      <td>{{ $data['assunto'] }}</td>
+                                    </tr>
+                                    @endif
+
+                                    @if (isset($data['mensagem']))
+                                    <tr>
+                                      <td><b>Mensagem:</b></td>
                                       <td>{{ $data['mensagem'] }}</td>
                                     </tr>
                                     @endif
+
                                   </tbody>
                                 </table>
                               </td>

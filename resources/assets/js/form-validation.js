@@ -1,25 +1,27 @@
-$(document).on("keyup", ".contact-form .input", function () {
+$(document).on("keyup", ".input", function () {
     var icon = $(this).closest(".desc-input").find(".icon");
 
-    if ($(this).val() != "" && !$(icon).hasClass("color")) {
-        var source = icon.attr("src").split(".")[0];
-        var ext = icon.attr("src").split(".")[1];
-        $(icon).attr('src', source + "-color." + ext);
-        $(icon).addClass("color");
-    }
-    else if ($(this).val() == "" && $(icon).hasClass("color")) {
-        var source = icon.attr("src").split("-color.")[0];
-        var ext = icon.attr("src").split("-color.")[1];
-        $(icon).attr('src', source + "." + ext);
-        $(icon).removeClass("color");
+    if (icon.length > 0) {
+        if ($(this).val() != "" && !$(icon).hasClass("color")) {
+            var source = icon.attr("src").split(".")[0];
+            var ext = icon.attr("src").split(".")[1];
+            $(icon).attr('src', source + "-color." + ext);
+            $(icon).addClass("color");
+        }
+        else if ($(this).val() == "" && $(icon).hasClass("color")) {
+            var source = icon.attr("src").split("-color.")[0];
+            var ext = icon.attr("src").split("-color.")[1];
+            $(icon).attr('src', source + "." + ext);
+            $(icon).removeClass("color");
+        }
     }
 })
 
 var inputs
 
-$(".form").submit(function (e) {
+$(".needs-validation").submit(function (e) {
     $(this).addClass("was-validated")
-    inputs = $(this).find(".input")
+    inputs = $(this).find("[required]")
 
     $(inputs).each(function () {
         verifInput($(this))
@@ -36,23 +38,15 @@ $(".form").submit(function (e) {
         e.preventDefault()
 })
 
-$(document).on("keyup", "form.was-validated .input", function () {
+$(document).on("keyup", ".was-validated [required]", function () {
     verifInput($(this))
 })
 
 function verifInput(input) {
-    var valid = true;
-    var feedback = $(input).closest('.desc-input').find('.invalid-feedback')
 
-    if ($(input).val() == "" && $(input).attr("required") != undefined)
-        valid = false
+    if ($(input).val() == "")
+        $(input).closest('.desc-input').addClass("invalid")
+    else
+        $(input).closest('.desc-input').removeClass("invalid")
 
-    if (valid) {
-        $(feedback).css("display", "none")
-        $(input).removeClass("invalid")
-    }
-    else {
-        $(feedback).css("display", "block")
-        $(input).addClass("invalid")
-    }
 }

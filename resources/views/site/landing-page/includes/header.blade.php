@@ -17,7 +17,7 @@
 
 <div class="container">
     <div class="form-container">
-        <form method="post" action="{{ url('/send-mail') }}" class="form col-lg-5 offset-lg-7 col-md-7 offset-md-5 col-12 contact-form" novalidate>
+        <form method="post" action="{{ route('sendMailLp') }}" class="form needs-validation col-lg-5 offset-lg-7 col-md-7 offset-md-5 col-12 contact-form" novalidate>
             @csrf
             
             <div class="title">Agende uma consulta <br> agora mesmo!</div>

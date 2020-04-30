@@ -1,0 +1,395 @@
+.contato-page{
+    padding: 4rem 0 0 0;
+
+    > .title{
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+
+    > .desc{
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+
+        > .link{
+            color: $secundary;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+
+    > .contact-form{
+        background-image: url("#{$img}pages/contato/detail.png");
+        background-size: 50% calc(100% + 2rem);
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        z-index: 0;
+
+        > .content{
+            display: flex;
+            flex-direction: column;
+
+            > .alert{
+                width: 100%;
+                text-align: center;
+                font-weight: 600;                
+                background: transparent;
+
+                &.success{
+                    border: 1px solid $secundary;
+                    color: $secundary;
+                }
+
+                &.error{
+                    border: 1px solid $red;
+                    color: $red;
+                }
+            }
+
+            .desc-input{
+                position: relative;
+                width: 100%;
+                margin-bottom: 2rem;
+    
+                > .desc{
+                    font-weight: 700;
+                }
+    
+                > .icon{
+                    position: absolute;
+                    bottom: 1.2rem;
+                    left: 1rem;
+                    max-height: 25px;
+                    max-width: 25px;
+                }
+    
+                > .input{
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 1px solid #ddd;
+                    padding: 1rem 2rem 1rem 3rem;
+                    background-color: #fff;
+                    transition: .2s;
+    
+                    &:focus{
+                        border-color: $secundary;
+                        box-shadow: 0 2px 5px $secundary;
+                    }
+                }
+    
+                > textarea{
+                    resize: none;
+                    height: 150px;
+                }
+    
+                > select, > textarea{
+                    padding-left: 1rem !important;
+                }
+
+                > .invalid-feedback{
+                    position: absolute;
+                    bottom: -1.2rem;
+                    font-size: 12px;
+                }
+
+                &.invalid{
+                    > .invalid-feedback{
+                        display: block;
+                    }
+                }
+            }
+    
+            .line{
+                display: flex;
+                justify-content: space-between;
+    
+                > .desc-input{
+                    &:first-child{
+                        width: 40%;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+    
+            .submit{
+                padding: 1.5rem 3rem;
+                background: $button-gradient;
+                border: none;
+                border-radius: 50px;
+                margin: 2rem 0;
+                color: #fff;
+                align-self: center;            
+            }
+        }
+    }
+
+    > .maparea{
+        margin-top: 5rem;
+
+        > .content{
+            > .title{
+                text-align: center;
+                margin: auto;
+                margin-bottom: 2rem;
+                font-weight: 700;
+            }
+    
+            > .unidades-list{
+                display: flex;
+                width: 100%;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    left: 0;
+                    background: linear-gradient(to right, $secundary 0%, #eee 40%);
+                }
+
+                .unidade{
+                    flex: 1;
+                    text-align: center;
+                    padding: 1.75rem 1rem;
+                    font-size: 14px;
+                    position: relative;
+                    transition: .2s;
+                    cursor: pointer;
+
+                    &:hover{
+                        &:before{
+                            height: 3px;
+                        }
+                    }
+
+                    &.active{
+                        color: $secundary;
+                        font-weight: 700;
+                    }
+
+                    &:before{
+                        content: '';
+                        width: 100%;
+                        height: 0px;
+                        background-color: $secundary;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transition: .2s;
+                    }
+
+                    &:not(:last-child):after{
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 25%;
+                        height: 50%;
+                        width: 5px;
+                        border-right: 4px dotted #ccc;
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+
+        > .map{
+            width: 100%;
+            height: 400px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > .map-frame{
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: 0;
+
+                &.active{
+                    opacity: 1;
+                }
+            }
+
+            > .details-list{
+                > .detail{
+                    position: absolute;
+                    background-color: #fff;
+                    left: 20%;
+                    bottom: 20%;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    max-width: 400px;
+                    box-shadow: 0 0 10px #aaa;
+                    opacity: 0;
+                    transition: .2s;
+
+                    &.active{
+                        opacity: 1;
+                    }
+
+                    > .title{
+                        font-weight: 700;
+                        font-size: 16px;
+                        margin-bottom: 1rem;
+                    }
+
+                    > .line{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        font-size: 12px;
+
+                        > a{
+                            font-weight: 600;
+                            margin-left: .5rem;
+                            transition: .2s;
+
+                            &:hover{
+                                color: $secundary;
+                            }
+                        }
+
+                        &:not(:last-child){
+                            margin-bottom: 1.5rem;
+                        }
+
+                        > .icon-container{
+                            margin-right: 1rem;
+                            
+                            > .icon{
+                                circle{
+                                    fill: #fff;
+                                    stroke: #fff;
+                                }
+                                path{
+                                    fill: $secundary;
+                                    stroke: none;
+                                }
+                                polyline{
+                                    stroke: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        > .contact-form{
+            background: none;
+
+            .line{
+                flex-direction: column;
+
+                > .desc-input{
+                    width: 100% !important;
+                }
+            }
+        }
+
+        > .maparea{
+
+            > .content{
+                > .unidades-list{
+                    flex-direction: column;
+                    margin-bottom: 5rem;
+    
+                    .unidade{
+                        width: 100%;
+                        flex: 1;
+                        padding: 1rem 0;
+    
+                        &:after, &:before{
+                            display: none;
+                        }
+                    }
+    
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+
+            > .map{
+                flex-direction: column;
+                height: unset;
+                margin-top: 2rem;
+                border-top: 1px solid #ddd;
+
+                > .details-list{
+                    .detail{
+                        width: 100%;
+                        left: 0;
+                        border-radius: 0;
+                        position: unset;
+                        box-shadow: none;
+                        display: none;
+
+                        &.active{
+                            display: block;
+                        }
+                    }
+                }
+
+                > .map-frame{
+                    width: 100%;
+                    height: 300px;
+                    position: unset;
+                    z-index: 0;
+                    display: none;
+
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+
+            .slick-arrow{
+                height: 50px;
+                width: 50px;
+                flex: 0 0 50px;
+                bottom: -3rem;
+                left: calc(50% - 25px);
+                border-radius: 50%;
+                border: none;
+                color: #fff;
+                background-color: $principal-dark;
+                position: absolute;
+                z-index: 20;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .2s;
+
+                &.slick-prev{
+                    margin-left: -30px;
+                }
+
+                &.slick-next{
+                    margin-left: 30px;
+
+                    svg{
+                        margin-left: 3px;
+                    }
+                }
+
+                &:hover{
+                    background-color: $secundary;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

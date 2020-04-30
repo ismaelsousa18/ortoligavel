@@ -94,6 +94,12 @@
                 position: absolute;
                 bottom: 0;
             }
+
+            &.invalid{
+                .invalid-feedback{
+                    display: block;
+                }
+            }
         }
 
         .submit{

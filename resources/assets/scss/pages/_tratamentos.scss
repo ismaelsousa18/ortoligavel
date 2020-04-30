@@ -276,6 +276,13 @@
                     > .right{
                         position: relative;
 
+                        > .title{
+                            min-height: 70px;
+                            display: flex;
+                            align-items: center;
+                            width: calc(100% - 80px);
+                        }
+
                         > .desc{
                             .arrow{
                                 width: 60px;
@@ -291,6 +298,12 @@
                                     }
                                 }
                             }
+
+                            > .link{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
                         }
                     }
 
@@ -303,10 +316,7 @@
                         }
 
                         > .right{
-                            > .title{
-                                float: right;
-                                text-align: right;
-                            }
+                            
 
                             > .desc{
                                 > .arrow{
@@ -940,6 +950,83 @@
 
                 &:hover{
                     background-color: darken($red, 5%);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        > .principal{
+            padding: 4rem 1rem 2rem 1rem;
+
+            > .desc{
+                text-align: left;
+            }
+        }
+
+        > .photos-area{
+            width: 100%;
+            padding: 0 1rem 5rem 1rem;
+
+            .slick-arrow{
+                top: 110%;
+                left: calc(50% - 25px) !important;
+                right: unset;
+
+                &.slick-prev{
+                    margin-left: -30px;
+                }
+
+                &.slick-next{
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        > .porque-usar{
+            padding: 2rem 1rem;
+
+            > .list{
+                flex-direction: column;
+
+                > .item{
+                    padding-left: 3rem;
+                    position: relative;
+
+                    > .icon{
+                        position: absolute;
+                        left: 1rem;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        > .passos{
+            > .passos-list{
+                flex-direction: column;
+
+                > .passo{
+                    margin: 0 !important;
+
+                    > .title{
+                        min-height: unset;
+                    }
+
+                    &:not(:last-child){
+                        margin-bottom: 6rem !important;
+
+                        &:after{
+                            width: 2px;
+                            height: 4rem;
+                            left: calc(50% - 1px);
+                            top: calc(100% + 1rem);
+                        }
+                    }
                 }
             }
         }

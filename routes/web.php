@@ -15,8 +15,12 @@ use App\Mail\Contact;
 |
 */
 
-Route::get('/lp', function () {
-    return view('site.landing-page.landing-page');
+Route::group(["prefix" => "/lp"], function () {
+    Route::get('/', function () {
+        return view('site.landing-page.landing-page');
+    });
+
+    Route::post('/send-mail', 'SendMail@lpsend')->name('sendMailLp');
 });
 
 Route::get('/', function () {
@@ -53,6 +57,8 @@ Route::group(['prefix' => '/tratamentos'], function () {
     });
 });
 
-Route::get('/mail-example', function () { return view('mail.contact');});
+Route::get('/contato', function () {
+    return view('site.contato');
+});
 
-Route::post('/send-mail', 'SendMail@send');
+Route::post('/contato', 'SendMail@send')->name('sendMail');

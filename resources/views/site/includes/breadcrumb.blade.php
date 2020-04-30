@@ -36,7 +36,7 @@
                 @yield('breadcrumb-title')
             </div>
 
-            <a href="/">
+            <a href="/agendar">
                 <button class="agendar">Agendar uma consulta</button>
             </a>
 

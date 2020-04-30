@@ -264,7 +264,7 @@
         }
     }
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 992px){
         > .content{
             > .list{
                 justify-content: center;
@@ -272,6 +272,10 @@
 
             > .line{
                 flex-direction: column;
+
+                > .title{
+                    text-align: center;
+                }
 
                 > a {
                     margin-top: 2rem;
