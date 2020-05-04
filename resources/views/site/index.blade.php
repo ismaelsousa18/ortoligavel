@@ -143,58 +143,7 @@
 
     </div>
 
-    <div class="unidades">
-
-        <img src="/img/pages/home/unidade-bg.png" alt="" class="background">
-
-        <div class="container content">
-
-            <h3 class="sub">Unidades Ortoligável</h3>
-            <h2 class="title">Escolha a unidade mais próxima de você:</h2>
-
-            <ul class="list">
-                <li class="item">
-                    
-                    <div class="top">
-                        <div class="image-area">
-                            <img src="/img/pages/home/unidade-2.png" alt="" class="source">
-                        </div>
-                        <div class="icon">
-                            <img src="/img/icons/map.png" alt="" class="source">
-                        </div>
-                    </div>
-
-                    <div class="text-area">
-                        <div class="text">
-                            Santos / SP
-                        </div>
-                    </div>
-
-                </li>
-                <li class="item">
-                    
-                    <div class="top">
-                        <div class="image-area">
-                            <img src="/img/pages/home/unidade-1.png" alt="" class="source">
-                        </div>
-                        <div class="icon">
-                            <img src="/img/icons/map.png" alt="" class="source">
-                        </div>
-                    </div>
-
-                    <div class="text-area">
-                        <div class="text">
-                            João Pessoa / PB
-                        </div>
-                    </div>
-
-                </li>
-                
-            </ul>
-
-        </div>
-
-    </div>
+    @include('site.includes.unidades')
 
     <div class="entenda">
         <img src="/img/pages/home/entenda-bg.png" alt="" class="background">

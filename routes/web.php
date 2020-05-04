@@ -31,6 +31,26 @@ Route::get('/sobre', function () {
     return view('site.about');
 });
 
+Route::get('/contato', function () {
+    return view('site.contato');
+});
+
+Route::post('/contato', 'SendMail@send')->name('sendMail');
+
+Route::group(['prefix' => '/unidades'], function () {
+    Route::get('/', function () {
+        return view('site.unidades.listagem');
+    });
+
+    Route::get('/santos', function () {
+        return view('site.unidades.santos');
+    });
+
+    Route::get('/joao-pessoa', function () {
+        return view('site.unidades.joao-pessoa');
+    });
+});
+
 Route::group(['prefix' => '/tratamentos'], function () {
     Route::get('/', function () {
         return view('site.tratamentos.listagem');
@@ -56,9 +76,3 @@ Route::group(['prefix' => '/tratamentos'], function () {
         return view('site.tratamentos.autoligavel-lingual');
     });
 });
-
-Route::get('/contato', function () {
-    return view('site.contato');
-});
-
-Route::post('/contato', 'SendMail@send')->name('sendMail');

@@ -38,7 +38,7 @@ $(".needs-validation").submit(function (e) {
         e.preventDefault()
 })
 
-$(document).on("keyup", ".was-validated [required]", function () {
+$(document).on("keyup change", ".was-validated [required]", function () {
     verifInput($(this))
 })
 

@@ -87,7 +87,6 @@
 
     @media screen and (max-width: 992px){
         position: relative;
-        
 
         .content{
             padding: 1rem 2rem;
@@ -156,4 +155,8 @@
 .index-header-container{
     position: absolute;
     width: 100%;
+
+    @media screen and (max-width: 992px){
+        position: relative;
+    }
 }

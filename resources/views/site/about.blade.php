@@ -58,44 +58,36 @@
 
         <div class="content container">
 
-            <ul class="images-list">
-
-                <li class="item">
-                    <img src="/img/pages/about/depoimentos-image-1.png" alt="Ortoligável - Ortodontia Inteligente"
-                        class="source">
+            <ul class="photos-list">
+                <li class="photo">
+                    <img src="/img/pages/about/depoimentos-image-1.png" alt="Ortoligável" class="source">
                     <a href="/img/pages/about/depoimentos-image-1.png" data-lightbox="images-list" class="link"></a>
                 </li>
 
-                <li class="item">
-                    <img src="/img/pages/about/depoimentos-image-2.png" alt="Ortoligável - Ortodontia Inteligente"
-                        class="source">
+                <li class="photo">
+                    <img src="/img/pages/about/depoimentos-image-2.png" alt="Ortoligável" class="source">
                     <a href="/img/pages/about/depoimentos-image-2.png" data-lightbox="images-list" class="link"></a>
                 </li>
 
-                <li class="item">
-                    <img src="/img/pages/about/depoimentos-image-3.png" alt="Ortoligável - Ortodontia Inteligente"
-                        class="source">
+                <li class="photo">
+                    <img src="/img/pages/about/depoimentos-image-3.png" alt="Ortoligável" class="source">
                     <a href="/img/pages/about/depoimentos-image-3.png" data-lightbox="images-list" class="link"></a>
                 </li>
 
-                <li class="item">
-                    <img src="/img/pages/about/depoimentos-image-1.png" alt="Ortoligável - Ortodontia Inteligente"
-                        class="source">
+                <li class="photo">
+                    <img src="/img/pages/about/depoimentos-image-1.png" alt="Ortoligável" class="source">
                     <a href="/img/pages/about/depoimentos-image-1.png" data-lightbox="images-list" class="link"></a>
                 </li>
 
-                <li class="item">
-                    <img src="/img/pages/about/depoimentos-image-2.png" alt="Ortoligável - Ortodontia Inteligente"
-                        class="source">
+                <li class="photo">
+                    <img src="/img/pages/about/depoimentos-image-2.png" alt="Ortoligável" class="source">
                     <a href="/img/pages/about/depoimentos-image-2.png" data-lightbox="images-list" class="link"></a>
                 </li>
 
-                <li class="item">
-                    <img src="/img/pages/about/depoimentos-image-3.png" alt="Ortoligável - Ortodontia Inteligente"
-                        class="source">
+                <li class="photo">
+                    <img src="/img/pages/about/depoimentos-image-3.png" alt="Ortoligável" class="source">
                     <a href="/img/pages/about/depoimentos-image-3.png" data-lightbox="images-list" class="link"></a>
                 </li>
-
             </ul>
 
             <div class="title">
@@ -200,56 +192,7 @@
         </div>
     </section>
 
-    <section class="unidades">
-
-        <img src="/img/pages/home/unidade-bg.png" alt="" class="background">
-
-        <div class="container content">
-
-            <h3 class="sub">Unidades Ortoligável</h3>
-            <h2 class="title">Escolha a unidade mais próxima de você:</h2>
-
-            <ul class="list">
-                <li class="item">
-
-                    <div class="top">
-                        <div class="image-area">
-                            <img src="/img/pages/home/unidade-2.png" alt="" class="source">
-                        </div>
-                        <div class="icon">
-                            <img src="/img/icons/map.png" alt="" class="source">
-                        </div>
-                    </div>
-
-                    <div class="text-area">
-                        <div class="text">
-                            Santos / SP
-                        </div>
-                    </div>
-
-                </li>
-                <li class="item">
-
-                    <div class="top">
-                        <div class="image-area">
-                            <img src="/img/pages/home/unidade-1.png" alt="" class="source">
-                        </div>
-                        <div class="icon">
-                            <img src="/img/icons/map.png" alt="" class="source">
-                        </div>
-                    </div>
-
-                    <div class="text-area">
-                        <div class="text">
-                            João Pessoa / PB
-                        </div>
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-    </section>
+    @include('site.includes.unidades')
 
 </section>
 

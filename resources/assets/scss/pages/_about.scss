@@ -87,12 +87,13 @@
 
         > .content{
 
-            > .images-list{
+            > .photos-list{
                 display: flex;
                 width: 100%;
                 position: relative;
                 align-items: center;
-
+                padding: 0;
+    
                 .slick-arrow{
                     height: 50px;
                     width: 50px;
@@ -107,31 +108,31 @@
                     justify-content: center;
                     align-items: center;
                     transition: .2s;
-
+    
                     &.slick-prev{
                         left: -25px;
                     }
-
+    
                     &.slick-next{
                         right: -25px;
-
+    
                         svg{
                             margin-left: 3px;
                         }
                     }
-
+    
                     &:hover{
-                        background-color: $secundary;
                         transform: scale(1.1);
+                        background-color: $secundary;
                     }
                 }
-
+    
                 .slick-list{
                     border-radius: 20px;
                     overflow: hidden;
                 }
-
-                .item{
+    
+                .photo{
                     height: 400px;
                     overflow: hidden;
                     flex: 1;
@@ -141,7 +142,7 @@
                     transition: .2s;
                     position: relative;
                     cursor: pointer;
-
+    
                     &:after{
                         content: '';
                         width: 70px;
@@ -152,12 +153,12 @@
                         transition: .2s;
                         z-index: 3;
                     }
-
+    
                     &:before{
                         content: '';
                         width: 100%;
                         height: 100%;
-                        left: 100%;
+                        left: 0%;
                         top: 0%;
                         position: absolute;
                         background: $photo-hover;
@@ -165,25 +166,19 @@
                         transition: .2s;
                         z-index: 2;
                     }
-
+    
                     > .source{
                         transition: .2s;
                     }
-
+    
                     &:hover{
                         
-                        &:after{
+                        &:after, &:before{
                             opacity: 1;
-                        }
-
-                        &:before{
-                            opacity: 1;
-                            left: 0;
-                            top: 0;
                         }
                     }
                 }
-
+    
                 .link{
                     position: absolute;
                     top: 0;
@@ -662,6 +657,13 @@
             .image{
                 top: 0;
                 max-width: 100%;
+            }
+        }
+
+        > .depoimentos > .content > .photos-list{
+            .photo:after{
+                left: 40%;
+                top: 40%;
             }
         }
 
